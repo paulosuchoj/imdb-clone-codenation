@@ -1,0 +1,401 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+	box-sizing: border-box;
+}
+
+/*General Style*/
+body{
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+ul{
+	list-style: none;
+}
+
+img{
+	border: 0;
+}
+
+a, a:visited, a:active{
+	color: inherit;
+	text-decoration: none;
+}
+
+.container{
+	margin: 0 auto;
+	position: relative;
+	width: 960px;
+}
+
+/*Page Hero*/
+.hero{
+	background-attachment: fixed;
+	background-image: url(../img/capa-madmax2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	height: 90vh;
+	justify-content: space-between;
+	padding: 20px;
+	position: relative;
+	width: 100%;
+}
+
+.hero:after{
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 212, 255, 0) 75%);
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/*Main Menu*/
+.page-menu{
+	display: flex;
+	z-index: 2;
+}
+
+.page-menu .container{
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+/*Main Menu - IMDB Logo*/
+.page-menu-logo{
+	display: inline-block;
+}
+
+.page-menu-logo:hover{
+	cursor: pointer;
+}
+
+/*Main Menu - Item List*/
+.page-menu-list{
+	z-index: 2;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	color: #FFF;
+} 
+
+.page-menu-list-item{
+	margin: 0 25px;
+	padding: 20px;
+}
+
+.page-menu-list-item a, .movies-menu-list-item a{
+	font-size: 1.3em;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in-out;
+}
+
+.page-menu-list-item a:hover{
+	color: #e4bb23;
+}
+
+/*Main Menu - Profile Section*/
+.nav-profile{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: #FFF;
+}
+
+.nav-profile-photo{
+	border-radius: 100%;
+	height: 45px;
+	width: 45px;
+	overflow: hidden;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+	margin-right: 15px;
+}
+
+.nav-profile-photo img{
+	width: 100%;
+}
+
+.nav-profile-name{
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+/*Page Hero - Content*/
+.hero-content{
+	display: flex;
+	z-index: 2;
+	width: 100%;
+}
+
+.hero-title{
+	color: #FFF;
+	font-size: 6.5em;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0;
+	line-height: 1.2em;
+}
+
+.hero-genres{
+	display: flex;
+	font-size: 13px;
+	text-transform: uppercase;
+	margin: 15px 0 30px;
+	color: #FFF;
+}
+
+.hero-genres-item{
+	margin: 0 15px 0 0;
+	transition: all 0.2s ease-in-out;
+}
+
+.hero-genres-item:hover{
+	color: #e4bb23;
+}
+
+.trailer-button{
+	display: inline-block;
+	padding: 15px 50px;
+	border-radius: 40px;
+	background-color: #e4bb23;
+	font-size: 1.5em;
+	color: #000;
+	position: relative;
+}
+
+.trailer-button i{
+	font-size: 1.5em;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.trailer-button:after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 40px;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	opacity: 0;
+	transition: all 0.25s;
+}
+
+.trailer-button:hover:after{
+	opacity: 1;
+}
+
+/*Page Hero - Information*/
+.hero-info{
+	z-index: 2;
+	font-size: 1.4em;
+	color: #FFF;
+}
+
+.hero-info p:last-child{
+	color: #bc9a1d;
+}
+
+/*Movies - Menu*/
+.movies-menu{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	color: #e4bb23;
+}
+
+.movies-menu-list{
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	padding: 0 20px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.movies-menu-list-item{
+	font-size: 1.2em;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.movies-menu-list-item:hover{
+	border-bottom: 1px solid #e4bb23;
+}
+
+.movies{
+	background-color: #f2f2f2;
+	width: 100%;
+}
+
+.movies-list {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 20px 0;
+	width: 100%;
+}
+
+.movies-list-item {
+	background-color: #FFF;
+	border-radius: 10px;
+	width: 24%;
+	margin-bottom: 30px;
+	overflow: hidden;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	flex-direction: column;
+	display: flex;
+	flex-direction: column;
+}
+
+.movie-overlay{
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.5);
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	left: 0;
+	opacity: 0;
+	padding: 80px 20px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	visibility: hidden;
+	height: 100%;
+	width: 100%;
+	transition: all 0.2s ease-in-out;
+}
+
+.movies-list-item:hover .movie-overlay{
+	opacity: 1;
+	visibility: visible;
+}
+
+.movie-overlay h3{
+	color: #e4bb23;
+	font-size: 2em;
+	line-height: 1em;
+	text-transform: uppercase;
+}
+
+.movie-overlay i{
+	color: #FFF;
+	font-size: 5em;
+	transition: all 0.2s ease-in-out;
+}
+
+.movie-overlay i:hover{
+	color: #e4bb23;
+}
+
+.movie-cover {
+	width: 100%;
+	margin: 0;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.movie-cover img {
+	width: 100%;
+	height: auto;
+}
+
+.movie-info{
+	padding: 10px;
+	width: 100%;
+}
+
+.movie-info h3{
+	font-size: 1.3em;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.movie-genre-list {
+	margin: 10px 0;
+	display: flex;
+}
+
+.movie-genre-list a{
+	font-size: 1.1em;
+	color: #e4bb23;
+}
+
+.movie-rating {
+	margin: 0;
+	font-weight: bold;
+	font-size: 2em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.movie-rating i{
+	color: lightgrey;
+}
+
+.movie-rating i:hover{
+	cursor: pointer;
+	color: tomato;
+}
+
+footer{
+	background-color: #FFF;
+	color: gray;
+	text-align: center;
+	width: 100%;
+	padding: 20px 0;
+}
+
+footer .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer img{
+	border: 0;
+}
+
+.footer-social-media{
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+
+.footer-social-media li{
+	margin: 0 20px;
+	font-size: 2.5em;
+	color: #BABABA;
+	text-decoration: none;
+	transition: all 0.2s ease-in-out;
+}
+
+.footer-social-media-item-twitter:hover{
+	color: #5595ff;
+	cursor: pointer;
+}
+
+.footer-social-media-item-facebook:hover{
+	color: #3b5998;
+	cursor: pointer;
+}
+
+.footer-social-media-item-instagram:hover{
+	color: #e95950;
+	cursor: pointer;
+}
